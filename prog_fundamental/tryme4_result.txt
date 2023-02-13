@@ -1,0 +1,37 @@
+Calling nine_lines to print nine lines
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Calling clear_screen to print twenty five lines
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+End of call

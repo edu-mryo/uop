@@ -1,0 +1,32 @@
+Python 3.11.0 (v3.11.0:deaf509e8f, Oct 24 2022, 14:43:23) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+====== RESTART: /Users/markryo/Desktop/uop/prog_fundamental/w6_journal.py ======
+=========== Part I =========
+Wishing you a happy holiday
+split list
+['Wishing', 'you', 'a', 'happy', 'holiday']
+Delete three words
+['Wishing', 'you', 'a', 'happy']
+['Wishing', 'you', 'happy']
+['Wishing', 'happy']
+Add new words
+['Wishing', 'happy', 'Holiday']
+['Wishing', 'happy', 'Holiday', 'to', 'everyone']
+['Wishing', 'happy', 'Holiday', 'to', 'everyone', 'and', 'a', 'great', '2023']
+Turn tge list of words back into a single string
+Wishing happy Holiday to everyone and a great 2023
+
+========== Part II =========
+Nested List
+['a', ['b'], ['c', ['d']]]
+The '*' operator
+['Can', 'I get', 'an Espresso', 'Please ?', 'Can', 'I get', 'an Espresso', 'Please ?', 'Can', 'I get', 'an Espresso', 'Please ?', 'Can', 'I get', 'an Espresso', 'Please ?']
+List Slices
+['Like', 'Python', 'but']
+The “+=” operator
+["I'm", 'Singing', 'in', 'the', 'rain']
+A list filter
+[8, 12, 20]
+A list operation that is legal but does the wrong thing, and not what the programmer expects
+['A', 'Gone', 'a', 'g', 'l', 'z']
