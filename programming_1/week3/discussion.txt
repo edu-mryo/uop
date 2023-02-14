@@ -1,0 +1,22 @@
+A parameter is a variable name with type that is declared within the subroutine. Each parameter consists of type name, and variable name. A type name followed by a variable name defines the type of value that can be passed to a subroutine when it is called. It is also often called formal parameter. In subroutine , we can usually use any data type such as int, float, double, char, short, byte and string. 
+
+Formal Parameters and Actual Parameters
+The difference between formal parameters and actual parameters is that formal parameters are the variables that are listed as part of a subroutine declaration, while actual parameters are the values that are passed to the subroutine when it is called. For example, the subroutine subtract() has two formal parameters, a and b. 
+
+When the subroutine is called, the values that are passed to the subroutine are called actual parameters. For example, if the subroutine is called as subtract(10, 20), then the actual parameters are 10 and 20.
+
+public class discussion {
+
+    public static void subtract(int a, int b) {
+        System.out.println(a-b);
+    }
+
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+
+        subtract(a, b);
+
+    }
+}
+
