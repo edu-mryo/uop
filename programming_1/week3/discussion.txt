@@ -1,6 +1,6 @@
 A parameter is a variable name with type that is declared within the subroutine. Each parameter consists of type name, and variable name. 
 A type name followed by a variable name defines the type of value that can be passed to a subroutine when it is called. It is also often called formal parameter.
-In subroutine , we can usually use any data type such as int, float, double, char, short, byte and string. 
+In subroutine , we can usually use any data type such as int, float, double, char, short, byte and string. When the subroutine is executed, computer will take the parameter into the subroutine and use that data to complete the statement. 
 
 Formal Parameters and Actual Parameters
 The difference between formal parameters and actual parameters is that formal parameters are the variables that are listed as part of a subroutine declaration, 
@@ -41,3 +41,5 @@ Output:
 1024
 2048
 
+reference: 
+Javanotes 9, Section 4.3 -- The Basic Java Application. (2022). https://math.hws.edu/javanotes/c2/s1.html
