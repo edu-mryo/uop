@@ -3,15 +3,19 @@
  */
 public class discussion {
 
-    public static void subtract(int a, int b) {
-        System.out.println(a-b);
+    public static void main(String[] args) {
+        int a = 0;
+        int b = 2;
+
+        multi( a, b);
+
     }
 
-    public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
-
-        subtract(a, b);
-
+    public static void multi(int a, int b) {
+        do {
+            b = b * 2;
+            a++;
+            System.out.println(b);
+        } while (a < 10);
     }
 }

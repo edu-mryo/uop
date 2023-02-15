@@ -1,22 +1,43 @@
-A parameter is a variable name with type that is declared within the subroutine. Each parameter consists of type name, and variable name. A type name followed by a variable name defines the type of value that can be passed to a subroutine when it is called. It is also often called formal parameter. In subroutine , we can usually use any data type such as int, float, double, char, short, byte and string. 
+A parameter is a variable name with type that is declared within the subroutine. Each parameter consists of type name, and variable name. 
+A type name followed by a variable name defines the type of value that can be passed to a subroutine when it is called. It is also often called formal parameter.
+In subroutine , we can usually use any data type such as int, float, double, char, short, byte and string. 
 
 Formal Parameters and Actual Parameters
-The difference between formal parameters and actual parameters is that formal parameters are the variables that are listed as part of a subroutine declaration, while actual parameters are the values that are passed to the subroutine when it is called. For example, the subroutine subtract() has two formal parameters, a and b. 
+The difference between formal parameters and actual parameters is that formal parameters are the variables that are listed as part of a subroutine declaration, 
+while actual parameters are the values that are passed to the subroutine when it is called. For example, the below simple subroutine called multi() has two formal parameters, a and b. 
 
-When the subroutine is called, the values that are passed to the subroutine are called actual parameters. For example, if the subroutine is called as subtract(10, 20), then the actual parameters are 10 and 20.
+When the subroutine is called, the values that are passed to the subroutine are called actual parameters. 
+Going back to the multi() subroutine, you will noticed an initialized integer a and b, where a has the value of 0 and b with the value of 2. These two 'a' and 'b', which will be passed down to the actua multi() subroutine are the so-called actual parameter
+
 
 public class discussion {
 
-    public static void subtract(int a, int b) {
-        System.out.println(a-b);
+    public static void main(String[] args) {
+        int a = 0;
+        int b = 2;
+
+        multi( a, b);
+
     }
 
-    public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
-
-        subtract(a, b);
-
+    public static void multi(int a, int b) {
+        do {
+            b = b * 2;
+            a++;
+            System.out.println(b);
+        } while (a < 10);
     }
 }
+
+Output:
+4
+8
+16
+32
+64
+128
+256
+512
+1024
+2048
 
