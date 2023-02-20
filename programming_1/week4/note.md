@@ -1,4 +1,4 @@
-# Section 5.1 desu
+# Section 5.1
 
 OBJECT-ORIENTED PROGRAMMING (OOP) represents an attempt to make programs more closely model the way people think about and deal with the world.
 
