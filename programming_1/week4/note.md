@@ -15,7 +15,7 @@ class UserData {
 }
 ```
 
-![img](player_data_class_instance.png)
+![img](images/player_data_class_instance.png)
 - There is no such variable as PlayerData.name or PlayerData.age, since non-static variables do not become part of the class itself. 
 - PlayerData class can be used to create objects. There can be many objects created using the class, and each one will have its own variables called name and age. 
 - This is what it means for the non-static parts of the class to be a template for objects: Every object gets its own copy of the non-static part of the class. We can visualize the situation in the computer's memory after several objects have been created like this:
@@ -37,8 +37,8 @@ public class Student {
 ```
 
 What is static in class and what happens when you try to define value to a static class variable
-![img](what_is_static_in_class.png)
-![img](static_behaviour.png)
+![img](images/what_is_static_in_class.png)
+![img](images/static_behaviour.png)
 
 <br>
  <red>In Java, no variable can ever hold an object.
@@ -73,7 +73,7 @@ std1.name = "Mary Jones";
      //    initial values of zero.)
 ```
 
-![img](instance_example.png)
+![img](images/instance_example.png)
 - In this picture, when a variable contains a reference to an object, the value of that variable is shown as an arrow pointing to the object. Note, by the way, that the Strings are objects! The variable std3, with a value of null, doesn't point anywhere. The arrows from std1 and std2 both point to the same object. This illustrates a Very Important Point:
 
 ```
@@ -84,7 +84,7 @@ The object referred to is not copied.
 
 When you make a test "if (std1 == std2)", you are testing whether the values stored in std1 and std2 are the same. But the values that you are comparing are references to objects; they are not objects. So, you are testing whether std1 and std2 refer to the same object.
 
-![img](valu_assignment_for_objects.png)
+![img](images/valu_assignment_for_objects.png)
 
 
 to find out what its value is by providing a public accessor method that returns the value of the variable. 
@@ -130,3 +130,20 @@ public void setTitle( String newTitle ) {
  If you've used a getter and setter from the beginning, you can make the modification to your class without affecting any of the classes that use your class. 
 
 # Section 5.2
+
+Unlike other subroutines, a constructor can only be called using the new operator, in an expression that has the form
+
+`new class-name ( parameter-list )`
+
+A constructor call is more complicated than an ordinary subroutine or function call. It is helpful to understand the exact steps that the computer goes through to execute a constructor call:
+
+- First, the computer gets a block of unused memory in the heap, large enough to hold an object of the specified type.
+- It initializes the instance variables of the object. If the declaration of an instance variable specifies an initial value, then that value is computed and stored in the instance variable. Otherwise, the default initial value is used.
+- The actual parameters in the constructor, if any, are evaluated, and the values are assigned to the formal parameters of the constructor.
+- The statements in the body of the constructor, if any, are executed.
+A reference to the object is returned as the value of the constructor call.
+
+Java uses a procedure called garbage collection to reclaim memory occupied by objects that are no longer accessible to a program. It is the responsibility of the system, not the programmer, to keep track of which objects are "garbage."
+
+# Section 5.3
+
