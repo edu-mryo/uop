@@ -1,3 +1,4 @@
+# Section 5.1
 
 OBJECT-ORIENTED PROGRAMMING (OOP) represents an attempt to make programs more closely model the way people think about and deal with the world.
 
@@ -127,3 +128,5 @@ public void setTitle( String newTitle ) {
 ```
 
  If you've used a getter and setter from the beginning, you can make the modification to your class without affecting any of the classes that use your class. 
+
+# Section 5.2
