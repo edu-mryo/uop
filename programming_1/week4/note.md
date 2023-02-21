@@ -147,3 +147,38 @@ Java uses a procedure called garbage collection to reclaim memory occupied by ob
 
 # Section 5.3
 
+object-oriented programming encourages programmers to produce generalized software components that can be used in a wide variety of programming projects.
+
+A string can be built up from smaller pieces using the + operator, but this is not always efficient. If str is a String and ch is a character, then executing the command "str = str + ch;" involves creating a whole new string that is a copy of str, with the value of ch appended onto the end. **Copying the string takes some time. Building up a long string letter by letter would require a surprising amount of processing.** 
+   - The class **StringBuilder** makes it possible to be efficient about building up a long string from a number of smaller pieces. To do this, you must make an object belonging to the StringBuilder class. For example:
+
+      - `StringBuilder builder = new StringBuilder();`
+
+<br>
+
+`Random randGen = new Random();`
+ 
+ - if N is a positive integer, then `randGen.nextInt(N)` generates a random integer in the range from 0 to **N-1**. For example, this makes it a little easier to roll a pair of dice. Instead of saying "die1 = (int)(6*Math.random())+1;", one can say "die1 = randGen.nextInt(6)+1;"
+
+<br>
+
+One of the major features of object-oriented programming is the **ability to create subclasses of a class**. 
+   - The subclass inherits all the properties or behaviors of the class, but can modify and add to what it inherits.
+
+      - every class in Java (with just one exception) is a subclass of some other class. If you create a class and don't explicitly make it a subclass of some other class, then ***it automatically becomes a subclass of the special class named Object, in package java.lang.*** (Object is the one class that is not a subclass of any other class.)
+
+<br>
+
+```
+- Well-designed classes are software components that can be reused without editing. 
+
+- A well-designed class is not carefully crafted to do a particular job in a particular program. Instead, it is crafted to model some particular type of object or a single coherent concept.
+
+- A large programming project goes through a number of stages, starting with specification of the problem to be solved, followed by analysis of the problem and design of a program to solve it. 
+   - Then comes coding, in which the program's design is expressed in some actual programming language. This is followed by testing and debugging of the program. 
+   - After that comes a long period of maintenance, which means fixing any new problems that are found in the program and modifying it to adapt it to changing requirements. 
+   
+   --> Together, these stages form what is called the software life cycle
+```
+
+Large, complex programming projects are only likely to succeed if a careful, systematic approach is adopted during all stages of the software life cycle. The systematic approach to programming, using accepted principles of good design, is called *software engineering.*
