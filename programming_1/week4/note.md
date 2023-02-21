@@ -1,9 +1,10 @@
 |Section Link|
 |------------|
-| [Section5.1](#section-51)|
-| [Section5.2](#section-52)|
-| [Section5.3](#section-53)|
-| [Section5.4](#section-54)|
+| [Section5.1 (Objects, Instance Methods and Variables)](#section-51)|
+| [Section5.2 (Constructor and Object Initialization)](#section-52)|
+| [Section5.3 (Programming With Object)](#section-53)|
+| [Section5.4 (Designing Class)](#section-54-desgining-class)|
+| [Section 5.5 (Inheritance, Polymorphism and Abstract Class)](#section-55-inheritance-polymorphism-and-abstract-class)]
 
 
 
@@ -194,4 +195,8 @@ One of the major features of object-oriented programming is the **ability to cre
 Large, complex programming projects are only likely to succeed if a careful, systematic approach is adopted during all stages of the software life cycle. The systematic approach to programming, using accepted principles of good design, is called *software engineering.*
 
 
-# Section 5.4
+# Section 5.4 (Desgining Class)
+
+// Return here for code analysis
+
+# Section 5.5 (Inheritance, Polymorphism and Abstract Class)
