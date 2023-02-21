@@ -6,6 +6,7 @@
 | [Section5.4 (Designing Class)](#section-54-desgining-class)                                                           |
 | [Section 5.5 (Inheritance, Polymorphism and Abstract Class)](#section-55-inheritance-polymorphism-and-abstract-class) |
 | [Section 5.6 (This and Super)](#section-56-this-and-super)                                                            |
+| [Section 5.7 (Interfaces)](#section-57-interfaces)                                                                    |
 
 
 
@@ -332,3 +333,12 @@ Java also defines another special variable, named "super", for use in the defini
 - The variable super is for use in a subclass. Like this, super refers to the object that contains the method
 - Let's say that you use a method call super.doSomething() in a class that you are writing. Now, super doesn't know anything about any doSomething() method in the same class. It only knows about things in the superclass of that class, so super.doSomething() represents an attempt to execute a method named doSomething() from the superclass
     - `The reason super exists is so you can get access to things in the superclass that are hidden by things in the subclass `
+
+# Section 5.7 (Interfaces)
+
+Some object-oriented programming languages, such as C++, allow a class to extend two or more superclasses. This is called multiple inheritance
+- Such multiple inheritance is not allowed in Java. 
+- However, Java does have a feature that can be used to accomplish many of the same goals as multiple inheritance: interfaces.
+
+In Java, `interface` is a reserved word with an additional, technical meaning. An "interface" in this sense consists of a set of instance method interfaces, without any associated implementations.
+- A class can implement an interface by providing an implementation for each of the methods specified by the interface. Here is an example of a very simple Java interface:
