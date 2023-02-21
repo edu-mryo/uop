@@ -7,6 +7,7 @@
 | [Section 5.5 (Inheritance, Polymorphism and Abstract Class)](#section-55-inheritance-polymorphism-and-abstract-class) |
 | [Section 5.6 (This and Super)](#section-56-this-and-super)                                                            |
 | [Section 5.7 (Interfaces)](#section-57-interfaces)                                                                    |
+| [Discussion Theme](#discussion-theme)                                                                                 |
 
 
 
@@ -342,3 +343,41 @@ Some object-oriented programming languages, such as C++, allow a class to extend
 
 In Java, `interface` is a reserved word with an additional, technical meaning. An "interface" in this sense consists of a set of instance method interfaces, without any associated implementations.
 - A class can implement an interface by providing an implementation for each of the methods specified by the interface. Here is an example of a very simple Java interface:
+
+
+# Discussion Theme
+
+```
+Give an example of a class and an example of an object. Describe what a class is, what an object is, and how they are related. Use your examples to illustrate the descriptions.
+```
+
+In our reading "Introduction to Programming Using Java", Eck definces the idea of Class as "classes are used to create objects. A class is a kind of factory—or blueprint—for constructing objects.". Contrary to this, he describes object as something that "belongs to classes". Eck admits that the shortage of English is failing him to describe the relationship between Classes and object and how they relates to each other. With his ideas combined, we can argue that Class is the grand architecture of a so-called 'object' which is something created from the designed blueprint of Class. One key point here is that class should avoid to be too restrictve and detailed unless specificed. We should have a general class and if necessary, create a subclass, which will have more granularised charactertistic.
+
+A common example of class is Dog class. Dog has different kind breed but there are also some characteristics within the class of Dog , such as number of legs, how they bark. A below code is an example of Dog Class
+
+```
+public class Dog{
+
+   public String name;
+   public String breed;
+
+   public dog(String name, String breed){
+      this.name = name;
+      this.breed = breed;
+   }
+
+   public void bark(){
+      System.out.println("Bow wow")
+   }
+}
+```
+
+With the basic architecture ( or blueprint ) is created, we can now make an object , which is individual instance, or dog in this case.
+
+`Dog John = new Dog("John","Corgi");`
+
+Here , we created a reference to an object called John. John holds the reference point of a Dog object which has its name (John) and it's breed type (Corgi). With this instantiation, or creation object, we now have a unique dog object. If a user wants to add more Dog object, they can create more by using the same rule 
+
+Class-Name Object-Name = new Class-Name()
+
+To sum up , Class is the whole brueprint for creating an object, which is an individual data of created class with its own name. The Dog class is the blueprint with common dog characteristing and John is the object of the dog, a unique individual data of a dog. 
