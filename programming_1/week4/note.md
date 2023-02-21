@@ -1,10 +1,12 @@
-| Section Link                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------- |
-| [Section5.1 (Objects, Instance Methods and Variables)](#section-51)                                                    |
-| [Section5.2 (Constructor and Object Initialization)](#section-52)                                                      |
-| [Section5.3 (Programming With Object)](#section-53)                                                                    |
-| [Section5.4 (Designing Class)](#section-54-desgining-class)                                                            |
-| [Section 5.5 (Inheritance, Polymorphism and Abstract Class)](#section-55-inheritance-polymorphism-and-abstract-class)] |
+| Section Link                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------- |
+| [Section5.1 (Objects, Instance Methods and Variables)](#section-51)                                                   |
+| [Section5.2 (Constructor and Object Initialization)](#section-52)                                                     |
+| [Section5.3 (Programming With Object)](#section-53)                                                                   |
+| [Section5.4 (Designing Class)](#section-54-desgining-class)                                                           |
+| [Section 5.5 (Inheritance, Polymorphism and Abstract Class)](#section-55-inheritance-polymorphism-and-abstract-class) |
+| [Section 5.6 (This and Super)](#section-56-this-and-super)                                                            |
+
 
 
 
@@ -302,3 +304,31 @@ public class BlackjackHand extends Hand {
  `An abstract class is one that is not used to construct objects, but only as a basis for making subclasses. An abstract class exists only to express the common properties of all its subclasses.` 
    - A class that is not abstract is said to be concrete. You can create objects belonging to a concrete class, but not to an abstract class.
    -  A variable whose type is given by an abstract class can only refer to objects that belong to concrete subclasses of the abstract class.
+
+# Section 5.6 (this and super)
+
+A `static` member of a class has a simple name that can only be used inside the class definition; for use outside the class, it has a full name of the form class-name.simple-name.
+
+ when we are working inside a class and use a simple name to refer to an instance variable like test1, where is the object that contains the variable?
+ -  The solution to this riddle is simple: Suppose that a reference to "test1" occurs in the definition of some instance method. The method is part of some particular object of type Student. When that method gets executed, the occurrence of the name "test1" refers to the test1 variable in that same object
+    -  `This intent of the name, "this," is to refer to "this object,"`
+
+```
+public class Student {
+
+    private String name;  // Name of the student.
+    
+    public Student(String name) {
+         // Constructor.  Create a student with specified name.
+       this.name = name;
+    }
+      .
+      .   // More variables and methods.
+      .
+}
+```
+
+Java also defines another special variable, named "super", for use in the definitions of instance methods. 
+- The variable super is for use in a subclass. Like this, super refers to the object that contains the method
+- Let's say that you use a method call super.doSomething() in a class that you are writing. Now, super doesn't know anything about any doSomething() method in the same class. It only knows about things in the superclass of that class, so super.doSomething() represents an attempt to execute a method named doSomething() from the superclass
+    - `The reason super exists is so you can get access to things in the superclass that are hidden by things in the subclass `
