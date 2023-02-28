@@ -114,4 +114,4 @@ public class super_example_two extends super_example {
 }
 ```
 
-The above code is an example of super. The super_example_two class extends (Inherits) the super_example class, in which has the method called "speak()". When we create the object called test,
+The above code is an example of super. The super_example_two class extends (Inherits) the super_example class, in which has the method called "speak()" from the original super_example. The spaek() method written in the super_example_two invokes the super.speak(). We are however adding another line with println method after the super.speak() to override the original  method. By doing so, we are not only inheriting the original , but making a new unique method.

@@ -9,9 +9,6 @@
 | [Section 5.7 (Interfaces)](#section-57-interfaces)                                                                    |
 | [Discussion Theme](#discussion-theme)                                                                                 |
 
-
-
-
 # Section 5.1
 
 OBJECT-ORIENTED PROGRAMMING (OOP) represents an attempt to make programs more closely model the way people think about and deal with the world.
@@ -30,11 +27,13 @@ class UserData {
 ```
 
 ![img](images/player_data_class_instance.png)
-- There is no such variable as PlayerData.name or PlayerData.age, since non-static variables do not become part of the class itself. 
-- PlayerData class can be used to create objects. There can be many objects created using the class, and each one will have its own variables called name and age. 
+
+- There is no such variable as PlayerData.name or PlayerData.age, since non-static variables do not become part of the class itself.
+- PlayerData class can be used to create objects. There can be many objects created using the class, and each one will have its own variables called name and age.
 - This is what it means for the non-static parts of the class to be a template for objects: Every object gets its own copy of the non-static part of the class. We can visualize the situation in the computer's memory after several objects have been created like this:
 
 **every object contains a name and an age. An object that is created from a class is called an *instance* of that class, and as the picture shows, every object "knows" which class was used to create it.**
+
 - An object that is created using a class is said to be an instance of that class. We will sometimes say that the object belongs to the class. The variables that the object contains are called instance variables. The methods (that is, subroutines) that the object contains are called instance methods
 
 ```
@@ -58,8 +57,8 @@ What is static in class and what happens when you try to define value to a stati
  <red>In Java, no variable can ever hold an object.
 A variable can only hold a reference to an object. </red>
 
-- Instead of holding an object itself, a variable holds the information necessary to find the object in memory. This information is called a reference or pointer to the object. In effect, a reference to an object is the address of the memory location where the object is stored. 
-  - ```std = new Student();```   
+- Instead of holding an object itself, a variable holds the information necessary to find the object in memory. This information is called a reference or pointer to the object. In effect, a reference to an object is the address of the memory location where the object is stored.
+  - ```std = new Student();```
 
 ```
 Student std, std1,       // Declare four variables of
@@ -88,6 +87,7 @@ std1.name = "Mary Jones";
 ```
 
 ![img](images/instance_example.png)
+
 - In this picture, when a variable contains a reference to an object, the value of that variable is shown as an arrow pointing to the object. Note, by the way, that the Strings are objects! The variable std3, with a value of null, doesn't point anywhere. The arrows from std1 and std2 both point to the same object. This illustrates a Very Important Point:
 
 ```
@@ -100,8 +100,7 @@ When you make a test "if (std1 == std2)", you are testing whether the values sto
 
 ![img](images/valu_assignment_for_objects.png)
 
-
-to find out what its value is by providing a public accessor method that returns the value of the variable. 
+to find out what its value is by providing a public accessor method that returns the value of the variable.
 
 ```
 public String getTitle() {
@@ -109,10 +108,9 @@ public String getTitle() {
 }
 ```
 
-By convention, the name of an accessor method for a variable is obtained by capitalizing the name of variable and adding "get" in front of the name. 
+By convention, the name of an accessor method for a variable is obtained by capitalizing the name of variable and adding "get" in front of the name.
 
-
-You might also want to allow "write access" to a private variable. That is, you might want to make it possible for other classes to specify a new value for the variable. 
+You might also want to allow "write access" to a private variable. That is, you might want to make it possible for other classes to specify a new value for the variable.
 
 ```
 public void setTitle( String newTitle ) {
@@ -120,9 +118,10 @@ public void setTitle( String newTitle ) {
 }
 ```
 
-you might wonder why not just make the variable public? The reason is that getters and setters are not restricted to simply reading and writing the variable's value. 
+you might wonder why not just make the variable public? The reason is that getters and setters are not restricted to simply reading and writing the variable's value.
 
 a getter method might keep track of the number of times that the variable has been accessed:
+
 ```
 public String getTitle() {
     titleAccessCount++;  // Increment member variable titleAccessCount.
@@ -141,7 +140,7 @@ public void setTitle( String newTitle ) {
 }
 ```
 
- If you've used a getter and setter from the beginning, you can make the modification to your class without affecting any of the classes that use your class. 
+ If you've used a getter and setter from the beginning, you can make the modification to your class without affecting any of the classes that use your class.
 
 # Section 5.2
 
@@ -163,41 +162,40 @@ Java uses a procedure called garbage collection to reclaim memory occupied by ob
 
 object-oriented programming encourages programmers to produce generalized software components that can be used in a wide variety of programming projects.
 
-A string can be built up from smaller pieces using the + operator, but this is not always efficient. If str is a String and ch is a character, then executing the command "str = str + ch;" involves creating a whole new string that is a copy of str, with the value of ch appended onto the end. **Copying the string takes some time. Building up a long string letter by letter would require a surprising amount of processing.** 
-   - The class **StringBuilder** makes it possible to be efficient about building up a long string from a number of smaller pieces. To do this, you must make an object belonging to the StringBuilder class. For example:
+A string can be built up from smaller pieces using the + operator, but this is not always efficient. If str is a String and ch is a character, then executing the command "str = str + ch;" involves creating a whole new string that is a copy of str, with the value of ch appended onto the end. **Copying the string takes some time. Building up a long string letter by letter would require a surprising amount of processing.**
 
-      - `StringBuilder builder = new StringBuilder();`
+- The class **StringBuilder** makes it possible to be efficient about building up a long string from a number of smaller pieces. To do this, you must make an object belonging to the StringBuilder class. For example:
+
+  - `StringBuilder builder = new StringBuilder();`
 
 <br>
 
 `Random randGen = new Random();`
- 
- - if N is a positive integer, then `randGen.nextInt(N)` generates a random integer in the range from 0 to **N-1**. For example, this makes it a little easier to roll a pair of dice. Instead of saying "die1 = (int)(6*Math.random())+1;", one can say "die1 = randGen.nextInt(6)+1;"
+
+- if N is a positive integer, then `randGen.nextInt(N)` generates a random integer in the range from 0 to **N-1**. For example, this makes it a little easier to roll a pair of dice. Instead of saying "die1 = (int)(6*Math.random())+1;", one can say "die1 = randGen.nextInt(6)+1;"
 
 <br>
 
-One of the major features of object-oriented programming is the **ability to create subclasses of a class**. 
-   - The subclass inherits all the properties or behaviors of the class, but can modify and add to what it inherits.
+One of the major features of object-oriented programming is the **ability to create subclasses of a class**.
 
-      - every class in Java (with just one exception) is a subclass of some other class. If you create a class and don't explicitly make it a subclass of some other class, then ***it automatically becomes a subclass of the special class named Object, in package java.lang.*** (Object is the one class that is not a subclass of any other class.)
+- The subclass inherits all the properties or behaviors of the class, but can modify and add to what it inherits.
+
+  - every class in Java (with just one exception) is a subclass of some other class. If you create a class and don't explicitly make it a subclass of some other class, then ***it automatically becomes a subclass of the special class named Object, in package java.lang.*** (Object is the one class that is not a subclass of any other class.)
 
 <br>
 <br>
 
-
-- Well-designed classes are software components that can be reused without editing. 
+- Well-designed classes are software components that can be reused without editing.
 
 - A well-designed class is not carefully crafted to do a particular job in a particular program. Instead, it is crafted to model some particular type of object or a single coherent concept.
 
-- A large programming project goes through a number of stages, starting with specification of the problem to be solved, followed by analysis of the problem and design of a program to solve it. 
-   - Then comes coding, in which the program's design is expressed in some actual programming language. This is followed by testing and debugging of the program. 
-   - After that comes a long period of maintenance, which means fixing any new problems that are found in the program and modifying it to adapt it to changing requirements. 
-   
+- A large programming project goes through a number of stages, starting with specification of the problem to be solved, followed by analysis of the problem and design of a program to solve it.
+  - Then comes coding, in which the program's design is expressed in some actual programming language. This is followed by testing and debugging of the program.
+  - After that comes a long period of maintenance, which means fixing any new problems that are found in the program and modifying it to adapt it to changing requirements.
+
    --> Together, these stages form what is called the software life cycle
 
-
 Large, complex programming projects are only likely to succeed if a careful, systematic approach is adopted during all stages of the software life cycle. The systematic approach to programming, using accepted principles of good design, is called *software engineering.*
-
 
 # Section 5.4 (Desgining Class)
 
@@ -205,13 +203,14 @@ Large, complex programming projects are only likely to succeed if a careful, sys
 
 # Section 5.5 (Inheritance, Polymorphism and Abstract Class)
 
-The central new idea in object-oriented programming—the idea that really distinguishes it from traditional programming—is to allow classes to express the similarities among objects that share some, but not all, of their structure and behavior. 
+The central new idea in object-oriented programming—the idea that really distinguishes it from traditional programming—is to allow classes to express the similarities among objects that share some, but not all, of their structure and behavior.
    Such similarities can be expressed `using inheritance and polymorphism.`
 
 <br>
 
- Subclassing is used mainly in one situation: There is an existing class that can be adapted with a few changes or additions. 
-   - This is much more common than designing groups of classes and subclasses from scratch. The existing class can be extended to make a subclass.
+ Subclassing is used mainly in one situation: There is an existing class that can be adapted with a few changes or additions.
+
+- This is much more common than designing groups of classes and subclasses from scratch. The existing class can be extended to make a subclass.
 
 ```
 public class subclass-name extends existing-class-name {
@@ -274,20 +273,20 @@ public class BlackjackHand extends Hand {
 
 } // end class BlackjackHand
 ```
-- Since BlackjackHand is a subclass of Hand, an object of type BlackjackHand contains all the instance variables and instance methods defined in Hand, plus the new instance method named getBlackjackValue(). 
-    - For example, if bjh is a variable of type BlackjackHand, then the following are all legal: bjh.getCardCount(), bjh.removeCard(0), and bjh.getBlackjackValue(). The first two methods are defined in Hand, but are inherited by BlackjackHand.
+
+- Since BlackjackHand is a subclass of Hand, an object of type BlackjackHand contains all the instance variables and instance methods defined in Hand, plus the new instance method named getBlackjackValue().
+  - For example, if bjh is a variable of type BlackjackHand, then the following are all legal: bjh.getCardCount(), bjh.removeCard(0), and bjh.getBlackjackValue(). The first two methods are defined in Hand, but are inherited by BlackjackHand.
 
 <br>
 
-- There is one more access modifier, `protected`, that comes into the picture when subclasses are taken into consideration. 
-  - When protected is applied as an access modifier to a method or member variable in a class, that member can be used in subclasses—direct or indirect—of the class in which it is defined, `but it cannot be used in non-subclasses. `
+- There is one more access modifier, `protected`, that comes into the picture when subclasses are taken into consideration.
+  - When protected is applied as an access modifier to a method or member variable in a class, that member can be used in subclasses—direct or indirect—of the class in which it is defined, `but it cannot be used in non-subclasses.`
   - When you declare a method or member variable to be protected, `you are saying that it is part of the implementation of the class, rather than part of the public interface of the class`. However, you are allowing subclasses to use and modify that part of the implementation.
-
 
 <br>
 
  The class that does the inheriting is said to be a `subclass of the class from which it inherits`. If class B is a subclass of class A, we also say that class A is a superclass of class B.
- 
+
  ![img](images/class_subclass.png)
 
  <br>
@@ -303,17 +302,19 @@ public class BlackjackHand extends Hand {
 
 <br>
 
- `An abstract class is one that is not used to construct objects, but only as a basis for making subclasses. An abstract class exists only to express the common properties of all its subclasses.` 
-   - A class that is not abstract is said to be concrete. You can create objects belonging to a concrete class, but not to an abstract class.
-   -  A variable whose type is given by an abstract class can only refer to objects that belong to concrete subclasses of the abstract class.
+ `An abstract class is one that is not used to construct objects, but only as a basis for making subclasses. An abstract class exists only to express the common properties of all its subclasses.`
+
+- A class that is not abstract is said to be concrete. You can create objects belonging to a concrete class, but not to an abstract class.
+- A variable whose type is given by an abstract class can only refer to objects that belong to concrete subclasses of the abstract class.
 
 # Section 5.6 (this and super)
 
 A `static` member of a class has a simple name that can only be used inside the class definition; for use outside the class, it has a full name of the form class-name.simple-name.
 
  when we are working inside a class and use a simple name to refer to an instance variable like test1, where is the object that contains the variable?
- -  The solution to this riddle is simple: Suppose that a reference to "test1" occurs in the definition of some instance method. The method is part of some particular object of type Student. When that method gets executed, the occurrence of the name "test1" refers to the test1 variable in that same object
-    -  `This intent of the name, "this," is to refer to "this object,"`
+
+- The solution to this riddle is simple: Suppose that a reference to "test1" occurs in the definition of some instance method. The method is part of some particular object of type Student. When that method gets executed, the occurrence of the name "test1" refers to the test1 variable in that same object
+  - `This intent of the name, "this," is to refer to "this object,"`
 
 ```
 public class Student {
@@ -330,20 +331,22 @@ public class Student {
 }
 ```
 
-Java also defines another special variable, named "super", for use in the definitions of instance methods. 
+Java also defines another special variable, named "super", for use in the definitions of instance methods.
+
 - The variable super is for use in a subclass. Like this, super refers to the object that contains the method
 - Let's say that you use a method call super.doSomething() in a class that you are writing. Now, super doesn't know anything about any doSomething() method in the same class. It only knows about things in the superclass of that class, so super.doSomething() represents an attempt to execute a method named doSomething() from the superclass
-    - `The reason super exists is so you can get access to things in the superclass that are hidden by things in the subclass `
+  - `The reason super exists is so you can get access to things in the superclass that are hidden by things in the subclass`
 
 # Section 5.7 (Interfaces)
 
 Some object-oriented programming languages, such as C++, allow a class to extend two or more superclasses. This is called multiple inheritance
-- Such multiple inheritance is not allowed in Java. 
+
+- Such multiple inheritance is not allowed in Java.
 - However, Java does have a feature that can be used to accomplish many of the same goals as multiple inheritance: interfaces.
 
 In Java, `interface` is a reserved word with an additional, technical meaning. An "interface" in this sense consists of a set of instance method interfaces, without any associated implementations.
-- A class can implement an interface by providing an implementation for each of the methods specified by the interface. Here is an example of a very simple Java interface:
 
+- A class can implement an interface by providing an implementation for each of the methods specified by the interface. Here is an example of a very simple Java interface:
 
 # Discussion Theme
 
@@ -376,8 +379,8 @@ With the basic architecture ( or blueprint ) is created, we can now make an obje
 
 `Dog John = new Dog("John","Corgi");`
 
-Here , we created a reference to an object called John. John holds the reference point of a Dog object which has its name (John) and it's breed type (Corgi). With this instantiation, or creation object, we now have a unique dog object. If a user wants to add more Dog object, they can create more by using the same rule 
+Here , we created a reference to an object called John. John holds the reference point of a Dog object which has its name (John) and it's breed type (Corgi). With this instantiation, or creation object, we now have a unique dog object. If a user wants to add more Dog object, they can create more by using the same rule
 
 Class-Name Object-Name = new Class-Name()
 
-To sum up , Class is the whole brueprint for creating an object, which is an individual data of created class with its own name. The Dog class is the blueprint with common dog characteristing and John is the object of the dog, a unique individual data of a dog. 
+To sum up , Class is the whole brueprint for creating an object, which is an individual data of created class with its own name. The Dog class is the blueprint with common dog characteristing and John is the object of the dog, a unique individual data of a dog.
