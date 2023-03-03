@@ -3,7 +3,8 @@
 | Section Link                             |
 | ---------------------------------------- |
 | [Section5.8](#section-58-nested-classes) |
-| [Discussion Theme](#discussion-theme)
+| [Discussion Theme](#discussion-theme)|
+| [Weekly Journal](#weekly-journal)|
 
 ## Section 5.8 (Nested Classes)
 
@@ -115,3 +116,20 @@ public class super_example_two extends super_example {
 ```
 
 The above code is an example of super. The super_example_two class extends (Inherits) the super_example class, in which has the method called "speak()" from the original super_example. The spaek() method written in the super_example_two invokes the super.speak(). We are however adding another line with println method after the super.speak() to override the original  method. By doing so, we are not only inheriting the original , but making a new unique method.
+
+## Weekly Journal
+
+This week's reading section from Eck's "Introduction to Programming Using Java" was quite challenging. It focused on several topics such as "this" and "super" keywords, interfaces, and nested classes. Although I found the reading to be tough, I was able to submit my coding assignment before the deadline, and it worked correctly. However, I am still not confident about how "this" works and how it played its role in the assignment.
+
+The "this" keyword is used to refer to the current object instead of local variables. We typically use the this.xxx notation to access an object's attributes or methods. However, I found the examples provided by Eck to be confusing, which led to my lack of confidence in using the "this" keyword.  It seems there are many other resources including videos to watch to fully understand the concept of this notation and when to use. However, programming in the end requires many practices and real world implementation to grasp the concept. That being said , to improve my understanding, I plan to write more code for my week assignment notes and also find additional examples from repositories like github.
+
+On the other hand, I found the "super" keyword to be clearer than "this." The super.xxx notation is used to call methods or variables from the superclass in a child class. It is essential to use the super keyword because calling the same method without it will override the superclass method. Overall, I think I have a better understanding of the "super" keyword than "this." In addition to the keywords, the reading also covered interfaces and nested classes. Interfaces are similar to abstract classes in that they ensure limited access and security. However, they must be called from other classes. Nested classes, on the other hand, are classes that are contained within another class. They ensure limited access, such as private or protected, and can be useful for organizing code.
+
+Overall, this week's reading contained relatively complex and advanced techniques. While I found the concepts challenging, I was able to complete the coding assignment on time. However, I am still not confident in using the "this" keyword and plan to write more code to get used to it. The "super" keyword, on the other hand, was more straightforward, and I feel comfortable using it. The sections on interfaces and nested classes were relatively straightforward, and I believe that I have a good understanding of these topics. In conclusion, I will continue to practice writing code and look for additional resources to improve my understanding of these concepts.
+
+References
+
+Reference
+Javanotes 9, Section 5.6 -- The Basic Java Application. (n.d.). <https://math.hws.edu/javanotes/c2/s1.html>
+Javanotes 9, Section 5.7 -- The Basic Java Application. (n.d.). <https://math.hws.edu/javanotes/c2/s1.html>
+Javanotes 9, Section 5.8 -- The Basic Java Application. (n.d.). <https://math.hws.edu/javanotes/c2/s1.html>
