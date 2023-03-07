@@ -34,7 +34,7 @@ public class Quiz {
                                 "Borris Johnson", "Pikachu", "Brad Pitt", "Sundar Pichai", "e");
                 question.check();
 
-                question.showResults();
+                MultipleChoiceQuestion.showResults();
 
         }
 
